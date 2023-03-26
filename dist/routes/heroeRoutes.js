@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const heroeControllers_1 = require("../controllers/heroeControllers");
+const heroeRoutes = (0, express_1.Router)();
+heroeRoutes.delete("/deleteHeroe/:id", heroeControllers_1.deleteHeroe);
+heroeRoutes.get("/getHeroe/:id", heroeControllers_1.getHeroe);
+heroeRoutes.post("/addHeroe", heroeControllers_1.addHeroe);
+heroeRoutes.put("/updateHeroe/:id", heroeControllers_1.updateHeroe);
+exports.default = heroeRoutes;

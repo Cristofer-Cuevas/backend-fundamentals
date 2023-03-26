@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const villianControllers_1 = require("../controllers/villianControllers");
+const villianRoutes = (0, express_1.Router)();
+villianRoutes.delete("/deleteVillian/:id", villianControllers_1.deleteVillian);
+villianRoutes.get("/getVillian/:id", villianControllers_1.getVillian);
+villianRoutes.post("/addVillian", villianControllers_1.addVillian);
+villianRoutes.put("/updateVillian/:id", villianControllers_1.updateVillian);
+exports.default = villianRoutes;
